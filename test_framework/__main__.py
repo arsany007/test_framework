@@ -1,4 +1,4 @@
-"""Entry point for python_template."""
+"""Entry point for test_framework."""
 
 from .cli import main  # pragma: no cover
 

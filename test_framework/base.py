@@ -1,7 +1,7 @@
 """
-python_template base module.
+test_framework base module.
 
-This is the principal module of the python_template project.
+This is the principal module of the test_framework project.
 here you put your main classes and objects.
 
 Be creative! do whatever you want!
@@ -14,4 +14,4 @@ and then choose `flask` as template.
 """
 
 # example constant variable
-NAME = "python_template"
+NAME = "test_framework"

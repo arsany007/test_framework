@@ -1,4 +1,4 @@
-"""CLI interface for python_template project.
+"""CLI interface for test_framework project.
 
 Be creative! do whatever you want!
 
@@ -12,7 +12,7 @@ Be creative! do whatever you want!
 def main():  # pragma: no cover
     """
     The main function executes on commands:
-    `python -m python_template` and `$ python_template `.
+    `python -m test_framework` and `$ test_framework `.
 
     This is your program's entry point.
 
