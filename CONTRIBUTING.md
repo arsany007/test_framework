@@ -15,14 +15,7 @@ Run `make install` to install the project in develop mode.
 ## Run the tests to ensure everything is working
 
 Run `make test` to run the tests.
-
-## Create a new branch to work on your contribution
-
-Run `git checkout -b my_contribution`
-
-## Make your changes
-
-Edit the files using your preferred editor. (we recommend VIM or VSCode)
+Ensure code coverage report shows `100%` coverage, add tests to your PR.
 
 ## Format the code
 
@@ -32,33 +25,12 @@ Run `make fmt` to format the code.
 
 Run `make lint` to run the linter.
 
-## Test your changes
-
-Run `make test` to run the tests.
-
-Ensure code coverage report shows `100%` coverage, add tests to your PR.
-
 ## Build the docs locally
 
 Run `make docs` to build the docs.
 
 Ensure your new changes are documented.
 
-## Commit your changes
-
-This project uses [conventional git commit messages](https://www.conventionalcommits.org/en/v1.0.0/).
-
-Example: `fix(package): update setup.py arguments 🎉` (emojis are fine too)
-
-## Push your changes to your fork
-
-Run `git push origin my_contribution`
-
-## Submit a pull request
-
-On github interface, click on `Pull Request` button.
-
-Wait CI to run and one of the developers will review your PR.
 
 ## Makefile utilities
 
