@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
 
+
 class PlatformAbstract(ABC):
     """
-    The platform class declares the factory method that is supposed to return an
-    object of a platform class.
+    The platform class declares the factory method that is supposed
+    to return an object of a platform class.
     """
 
     @abstractmethod
@@ -11,16 +12,16 @@ class PlatformAbstract(ABC):
         """
         read platform data.
         """
-        return NotImplementedError
+        raise NotImplementedError
 
     @abstractmethod
     def write(self, data) -> None:
         """
         write platform data.
         """
-        return NotImplementedError
+        raise NotImplementedError
 
-    def log(self,msg) -> None:
+    def log(self, msg) -> None:
         """
         log platform data.
         """
