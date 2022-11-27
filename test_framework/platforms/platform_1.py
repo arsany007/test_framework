@@ -8,3 +8,6 @@ class Platform1(PlatformAbstract):
 
     def read(self) -> str:
         return "Platform1"
+
+    def write(self, data) -> None:
+        raise NotImplementedError

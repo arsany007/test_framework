@@ -8,3 +8,6 @@ class Platform2(PlatformAbstract):
 
     def read(self) -> str:
         return "Platform2"
+
+    def write(self, data) -> None:
+        pass
