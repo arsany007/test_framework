@@ -7,6 +7,7 @@ IF %1==test GOTO test
 IF %1==fmt GOTO fmt
 IF %1==lint GOTO lint
 IF %1==clean GOTO clean
+IF %1==venv_off GOTO venv_off
 
 :virtualenv
   ECHO virtualenv
@@ -54,9 +55,12 @@ GOTO end
   FOR /d /r . %%d IN (*.egg-info) DO @IF EXIST "%%d" rd /s /q "%%d"
   FOR /d /r . %%d IN (htmlcov) DO @IF EXIST "%%d" rd /s /q "%%d"
   FOR /d /r . %%d IN (.tox/) DO @IF EXIST "%%d" rd /s /q "%%d"
-
 GOTO end
 
+:venv_off
+  ECHO venv_off
+  .\.venv\Scripts\deactivate.bat
+GOTO end
 
 :end
     echo end make
