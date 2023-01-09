@@ -7,9 +7,23 @@ Be creative! do whatever you want!
 - Start a web application
 - Import things from your .base module
 """
+import os
+import logging
+import hydra
+from omegaconf import OmegaConf
+
+try:
+    from .config import BaseConfig
+except:
+    from config import BaseConfig
 
 
-def main():  # pragma: no cover
+@hydra.main(
+    version_base=None, 
+    config_path=hydra.utils.to_absolute_path('.'), 
+    config_name="config"
+    )
+def main(cfg: BaseConfig) -> None:
     """
     The main function executes on commands:
     `python -m test_framework` and `$ test_framework `.
@@ -25,4 +39,13 @@ def main():  # pragma: no cover
         * List all available tasks
         * Run an application (Flask, FastAPI, Django, etc.)
     """
-    print("This will do something")
+
+    # this line actually runs the checks of pydantic
+    OmegaConf.to_object(cfg)
+
+    logging.info("Test Framework Start")
+    # logging.info(f'Working dir: {os.getcwd()}')
+    # logging.info( OmegaConf.get_type(cfg).__name__)
+
+    logging.info(OmegaConf.to_yaml(cfg, resolve=True))
+    logging.info(cfg.general.flag)

@@ -1,0 +1,8 @@
+defaults:
+  - _self_
+  - config_schema
+
+general:
+      platform: ""
+      testsuite: .
+      flag: false

@@ -14,17 +14,22 @@ pip install test_framework
 ## Usage
 
 ```py
-from test_framework import BaseClass
-from test_framework import base_function
+from test_framework import base
 
-BaseClass().base_method()
+base.base_method()
 base_function()
 ```
 
 ```bash
+Framework should run from the config file location 
+
+$ test_framework
+#or
 $ python -m test_framework
 #or
-$ test_framework
+$ python /path/to/test_framework
+#or
+$ python /path/to/test_framework -cn myconfigfile
 ```
 
 ## Development

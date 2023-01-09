@@ -15,3 +15,8 @@ and then choose `flask` as template.
 
 # example constant variable
 NAME = "test_framework"
+
+print("hello world")
+
+def base_init():
+    print("base_init")
